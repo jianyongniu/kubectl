@@ -198,6 +198,10 @@ func extractFileSpec(arg string) (fileSpec, error) {
 	}
 }
 
+func (o *CopyOptions) SetArgs(args []string) {
+	o.args = args
+}
+
 // Complete completes all the required options
 func (o *CopyOptions) Complete(f cmdutil.Factory, cmd *cobra.Command, args []string) error {
 	if cmd.Parent() != nil {
